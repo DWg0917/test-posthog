@@ -224,7 +224,7 @@ echo "Configuring Docker Compose...."
 # cp posthog/docker-compose.base.yml docker-compose.base.yml
 # cp posthog/docker-compose.hobby.yml docker-compose.yml
 echo "Starting the stack!"
-sudo -E docker-compose -f docker-compose.yml up -d --scale plugins=3 --no-build
+sudo -E docker compose -f docker-compose.yml up -d --scale plugins=3 --no-build
 
 echo "We will need to wait ~5-10 minutes for things to settle down, migrations to finish, and TLS certs to be issued"
 echo ""
